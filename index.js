@@ -23,21 +23,14 @@ var htracker = new headtrackr.Tracker();
 htracker.init(videoInput, canvasInput);
 htracker.start();
 
-var buttonLow = document.getElementById("low")
-var buttonMiddle = document.getElementById("middle")
-var buttonHigh = document.getElementById("high")
-
 var sound = new Howl ({
-  urls: ['loopin.mp3']
+  urls: ['Kygo - Firestone.mp3']
 }).play();
 
 
 
 
 document.addEventListener("headtrackingEvent", function(event){
-    sound.pos3d(-(event.x));
-    // if (event.x < 0) {
-    //   sound. = 250;
-    // } else if (event.x <= 0) {
-    //   sound.frequency.value = 500;
+    sound.pos3d(-(event.x + 1.0)/3);
+    console.log((event.x + 1.0)/3);  
 });
