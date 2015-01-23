@@ -11,11 +11,6 @@ var context = new AudioContext();
 oscillator.connect(gainNode);
 gainNode.connect(audioCtx.destination);
 
-// sound.type = 0;
-// sound.frequency.value = 500;
-// sound.start();
-//
-//
 
 var videoInput = document.getElementById('inputVideo');
 var canvasInput = document.getElementById('inputCanvas');
@@ -32,5 +27,5 @@ var sound = new Howl ({
 
 document.addEventListener("headtrackingEvent", function(event){
     sound.pos3d(-(event.x + 1.0)/3);
-    console.log((event.x + 1.0)/3);  
+    console.log((event.x + 1.0)/3);
 });
